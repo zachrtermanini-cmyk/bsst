@@ -13,9 +13,9 @@ window.playerGear={
         basicSprinkler:{
 
             count:1,
-            diameter:10,
-            power:0.2,
-            rate:4,
+            diameter:1000,
+            power:0.9,
+            rate:1,
             mesh:function(x,y,z,box,cylinder){
 
                 cylinder(x,y,z,0.125,1.25,10,0.3,0.3,0.3,1,90,0,0)
@@ -1343,7 +1343,7 @@ window.playerGear={
                 stats.movementCollection+=1000
                 stats.walkSpeed*=2
                 stats.beeSpeed*=4
-                stats.jumpPower*=100
+                stats.jumpPower*=2
             },
             desc:'Move faster and collect pollen as you walk through flowers!<br><br>+1 movement collection<br>x1.05 bee speed<br>x1.1 movespeed',
             cost:['5000 honey','3 sunflowerSeed','3 blueberry','3 strawberry'],

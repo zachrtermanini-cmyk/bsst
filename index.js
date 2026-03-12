@@ -26643,7 +26643,7 @@ function BeeSwarmSimulator(DATA){
                 out.removeAirFrictionUntilGrounded=false
                 
                 if(user.keys[' ']||jumpingButton){
-                    out.grounded=false
+                    out.grounded=true
                     out.body.velocity.y=out.jumpPower
                 }
                 
@@ -27861,7 +27861,7 @@ function BeeSwarmSimulator(DATA){
                 name:'hiveSlot',
                 slot:'item',
                 viewMatrix:[-10,37,74,MATH.HALF_PI,0],
-                cost:[n=>Math.floor(Math.pow(1.375,n)*1000000)+' honey'],
+                cost:['100 honey'],
                 desc:'Increases the capacity of your hive, allowing you to hatch an additional bee!'
             }],
             currentIndex:0,message:'Explore Top Shop'
@@ -28228,7 +28228,7 @@ function BeeSwarmSimulator(DATA){
                 name:'royalJelly',
                 slot:'item',
                 viewMatrix:[32+4.5,12,50.25-4.5,-MATH.HALF_PI-MATH.QUATER_PI,0.02],
-                cost:[(n,i=1)=>Math.floor(Math.min(n*2500+25000,1000000)*i)+' honey'],
+                cost:['100 honey'],
                 desc:'Can be fed to a bee to transform it into a different type!'
             }],
             currentIndex:0,message:'Explore Royal Jelly Shop',currentIncrement:0,increments:[1,10,10e1,10e2,10e3,10e4]
@@ -28242,7 +28242,7 @@ function BeeSwarmSimulator(DATA){
                 name:'basicEgg',
                 slot:'item',
                 viewMatrix:[10-4.5,1,13.5-4.5,MATH.HALF_PI+MATH.QUATER_PI,0.02],
-                cost:[(n,i=1)=>(Math.min(500*Math.pow(1.35,n)*i,10000000)|0)+' honey'],
+                cost:['100 honey'],
                 desc:'Can be used to hatch a Basic Bee!'
             }],
             currentIndex:0,message:'Explore Basic Egg Shop'
@@ -34760,6 +34760,7 @@ function BeeSwarmSimulator(DATA){
     
 
 }
+
 
 
 

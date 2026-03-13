@@ -13,9 +13,9 @@ window.playerGear={
         basicSprinkler:{
 
             count:1,
-            diameter:10,
-            power:0.2,
-            rate:4,
+            diameter:20,
+            power:0.9,
+            rate:1,
             mesh:function(x,y,z,box,cylinder){
 
                 cylinder(x,y,z,0.125,1.25,10,0.3,0.3,0.3,1,90,0,0)
@@ -455,7 +455,7 @@ window.playerGear={
             },
             applyStats:function(stats,player){
                 
-                stats.gliderSpeed=60*7
+                stats.gliderSpeed=60*5
                 stats.gliderFall=-0*0.75
             },
             desc:'A parachute you can use to glide down the mountain and reach new places!<br><br>Press jump while in the air to open. ',
@@ -479,7 +479,7 @@ window.playerGear={
             },
             applyStats:function(stats,player){
                 
-                stats.gliderSpeed=60
+                stats.gliderSpeed=60*3
                 stats.gliderFall=-0
             },
             desc:'Floats much faster than the Parachute, allowing you to fly through the sky!<br><br>Press jump while in the air to open. ',
@@ -1340,7 +1340,7 @@ window.playerGear={
             
             applyStats:function(stats,player){
                 
-                stats.movementCollection+=1
+                stats.movementCollection+=1000
                 stats.walkSpeed*=3
                 stats.beeSpeed*=10
                 stats.jumpPower*=3
